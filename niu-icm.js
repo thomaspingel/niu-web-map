@@ -22,7 +22,7 @@ function init(){
 		
 		map = L.map('map',{center: [41.935, -88.77], 
 						   zoom: 16,
-						   layers: mapboxGrayscaleBasemap});
+						   layers: OpenStreetMap_BlackAndWhite});
 
 		// See baselayers.js for control of the available baselayers.
 	    layerControl = L.control.layers(baseLayers,overlays).addTo(map);
