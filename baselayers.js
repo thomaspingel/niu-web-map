@@ -26,8 +26,8 @@ var mapQuestOpenAerialBasemap = L.tileLayer(mqURL,{subdomains:'1234',type:'sat',
 var baseLayers = {
 	"Map": mapQuestOpenOsmBasemap,  // "MapQuest OSM"
 	"Satellite": mapQuestOpenAerialBasemap,
-	//"OSM": osmBasemap,
-	//"Grayscale": mapboxGrayscaleBasemap,
-	//"Streets": streetsBasemap,
-	//"OpenCycleMap": openCycleMapBasemap
+	"OSM": osmBasemap,
+	"Grayscale": mapboxGrayscaleBasemap,
+	"Streets": streetsBasemap,
+	"OpenCycleMap": openCycleMapBasemap
 };
