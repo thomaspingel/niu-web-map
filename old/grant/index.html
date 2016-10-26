@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>NIU Interactive Campus Map</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<!-- link to external css libraries -->
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+	
+	<!-- link to internal css libraries -->
+	<link rel="stylesheet" href="iCampusMap_style.css" />
+	
+	<!-- link to javascript libraries -->
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+	
+	<!-- link to own javascript -->
+	<script src="iCampusMap.js" charset="UTF-8"></script>
+	<script src="iCampusMapJson.js" charset="UTF-8"></script>
+	
+	<noscript>Sorry, your browser does not support JavaScript!</noscript>
+</head>
+
+<body>
+	<div id="map" >
+	</div>
+	
+	<div class='navbar' id='navbar'>
+	
+		<div class="innernav">
+			<a href="http://www.niu.edu"><img id="logo" src="images/NIU_horz_3Clr.png" alt="NIU Logo"></a>
+			
+			<p id="about-text">This map was developed as part of the Spring 2013 Geog790 course by Grant Herbert, with OSM contributions by Raitis Bocka and Nicholas Cortellini.</p>
+			
+			<p>NIU Interactive Campus Map Project</p>
+			
+			<!-- search box and button -->
+			<input class="ui-widget" id="searchNIU" type="text" placeholder="Search the map..." />
+			<!--enter fires this button -->
+			<input id="btnOSMAPI" type="button" value="Search" onclick="searchOSM(); return false"/>
+			
+			<!-- other buttons -->
+			<input id="btnClearMap" type="button" value="Clear Map" onclick="clearMap()"/>
+			
+			<input id="btnShowAll" type="button" value="Show All Locations" onclick="showAllResultsOnMap()"/>
+			
+			
+			<div id="results">  </div> <!--holds search results -->
+			<div id="about"> </div> <!--holds popup results -->
+			
+		</div>
+	</div>
+	
+	
+	<script>
+//window.onload = init;	
+jQuery(document).ready(initmap());
+</script>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=9646693; 
+var sc_invisible=1; 
+var sc_security="37b8de25"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="hit counter"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9646693/0/37b8de25/1/"
+alt="hit counter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</body>
+
+
+
+</html>

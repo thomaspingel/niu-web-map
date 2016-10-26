@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NIU Interactive Campus Map V2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- JQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	
+
+	<!-- Leaflet -->
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+
+	<!-- NIU Interactive Campus Map -->
+	<link rel="stylesheet" href="niu-icm.css" />
+	<script src="data/busRoutes.js"></script>
+	<script src="baselayers.js"></script>
+	<script src="autocomplete.js"></script>
+	<script src="niu-icm.js"></script>
+	<script src="osmSearch.js"></script>
+	
+</head>
+<body>
+	<div id="map"></div>
+	<div id="searchdiv">
+		<form id="search-form" class="search" action="" method="post" onsubmit="searchOSM(document.getElementById('search-box').value); return false">
+			<input id="search-box" type="search" name="search" results="5" > 
+		</form>
+	</div>
+
+</body>
+</html>

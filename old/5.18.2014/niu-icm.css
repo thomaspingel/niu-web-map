@@ -1,0 +1,53 @@
+#searchdiv {
+	/* border-style: solid;  */
+	position: absolute;
+	top: 10px;
+	left: 65px;
+	/* padding: 10px;
+	border-radius: 20px; 
+	border-color: grey; */
+}
+#searchdiv:focus {
+	width: 80%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+html, body, #map {
+	height: 100%;
+}
+
+.busStopPoint-icon {
+    background: rgba(255, 255, 255, 0.7);
+    text-align:center;
+    vertical-align:middle;
+    border:2px solid #000;
+    border-radius:12px;
+    line-height:30px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+/* http://www.ian-thomas.net/make-an-animated-search-form-using-only-css/ */
+/* http://css-tricks.com/webkit-html5-search-inputs/ */
+.search input[type="search"]{
+    width:50px;  /* Starting Width */
+    height:50px;
+    border-radius: 25px;
+	font-size: large;
+	opacity: .85;
+	text-align: center;
+	text-indent: 10px;
+	outline: none;
+	padding: 12px;
+}
+
+.search input[type="search"]:focus {
+	width: 900px;
+	-webkit-transition:width 0.5s ease-in-out;
+	@media screen and (max-width: 768px) {
+		width: 300px;
+	}
+}
